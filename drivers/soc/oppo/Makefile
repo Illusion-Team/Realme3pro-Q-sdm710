@@ -24,7 +24,7 @@ obj-$(CONFIG_OPPO_SHUTDOWN_DETECT)	+=  oppo_shutdown_detect/
 #endif /* VENDOR_EDIT */
 
 #Kun.Hu@TECH.BSP.Stability.PHOENIX_PROJECT 2019/06/15, Add for PHOENIX_PROJECT
-obj-$(CONFIG_OPPO_PHOENIX)     +=  oppo_phoenix/
+#obj-$(CONFIG_OPPO_PHOENIX)     +=  oppo_phoenix/
 
 #ifdefine VENDOR_EDIT
 #GaoTing.Gan@PSW.MultiMedia.MediaServer, 2019/03/07, Add for kevent feedback
