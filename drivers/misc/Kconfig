@@ -828,7 +828,7 @@ source "drivers/misc/cxl/Kconfig"
 source "drivers/misc/fpr_FingerprintCard/Kconfig"
 #ifdef VENDOR_EDIT
 #PengNan@BSP.CHG.Basic 2019/04/07 add for oppo_motor.
-source "drivers/misc/oppo_motor/Kconfig"
+#source "drivers/misc/oppo_motor/Kconfig"
 #endif /* VENDOR_EDIT */
 endmenu
 
