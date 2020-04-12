@@ -26,9 +26,7 @@
 #include <linux/regulator/of_regulator.h>
 #include <linux/regulator/machine.h>
 #include <linux/pmic-voter.h>
-#define DFP_CC_1P4V_OR_1P6V_BIT 0
 
-//change
 #ifdef VENDOR_EDIT
 /* Jianchao.Shi@BSP.CHG.Basic, 2017/01/22, sjc Add for charging */
 #include <linux/gpio.h>
