@@ -4952,20 +4952,10 @@ static unsigned int binder_poll(struct file *filp,
 	thread = binder_get_thread(proc);
 	if (!thread)
 		return POLLERR;
-/*
-remove this if compile
-<<<<<<< HEAD*/
+
 	binder_inner_proc_lock(thread->proc);
 	thread->looper |= BINDER_LOOPER_STATE_POLL;
 	wait_for_proc_work = binder_available_for_proc_work_ilocked(thread);
-//=======
-
-
-//	thread->looper |= BINDER_LOOPER_STATE_POLL;
-
-//	wait_for_proc_work = thread->transaction_stack == NULL &&
-//		list_empty(&thread->todo) && thread->return_error == BR_OK;
-//>>>>>>> 186
 
 	binder_inner_proc_unlock(thread->proc);
 

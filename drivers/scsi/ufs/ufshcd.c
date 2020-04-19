@@ -10453,23 +10453,10 @@ static int ufshcd_devfreq_scale(struct ufs_hba *hba, bool scale_up)
 {
 	int ret = 0;
 
-/* todo remove if compile
-<<<<<<< HEAD
-	if (hba->extcon && ufshcd_is_card_offline(hba))
-		return 0;
-
-	 let's not get into low power until clock scaling is completed /
-	hba->ufs_stats.clk_hold.ctx = CLK_SCALE_WORK;
-	ufshcd_hold_all(hba);
-
-	ret = ufshcd_clock_scaling_prepare(hba);
-	if (ret)
-=======*/
 	if (!hba->is_powered)
 		goto out;
 
 	if (ufshcd_is_ufs_dev_poweroff(hba) && ufshcd_is_link_off(hba))
-//>>>>>>> 186
 		goto out;
 
 	ufshcd_custom_cmd_log(hba, "waited-for-DB-clear");
