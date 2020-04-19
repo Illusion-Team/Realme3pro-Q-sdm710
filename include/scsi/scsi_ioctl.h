@@ -1,3 +1,4 @@
+#include <uapi/scsi/scsi_ioctl.h>
 #ifndef _SCSI_IOCTL_H
 #define _SCSI_IOCTL_H 
 

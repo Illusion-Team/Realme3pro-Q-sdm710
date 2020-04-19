@@ -10,7 +10,7 @@
  */
 
 #define DEBUG		/* Enable initcall_debug */
-
+#undef VENDOR_EDIT
 #include <linux/types.h>
 #include <linux/module.h>
 #include <linux/proc_fs.h>
