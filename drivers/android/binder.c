@@ -4919,12 +4919,13 @@ static int binder_thread_release(struct binder_proc *proc,
 	}
 /*
 <<<<<<< HEAD
+*/
 	binder_inner_proc_unlock(thread->proc);
 
-=======
+//=======
 //todo remove this if compile 
->>>>>>> 186
-*/
+//>>>>>>> 186
+
 	/*
 	 * This is needed to avoid races between wake_up_poll() above and
 	 * and ep_remove_waitqueue() called for other reasons (eg the epoll file
@@ -4953,17 +4954,17 @@ static unsigned int binder_poll(struct file *filp,
 		return POLLERR;
 /*
 remove this if compile
-<<<<<<< HEAD
+<<<<<<< HEAD*/
 	binder_inner_proc_lock(thread->proc);
 	thread->looper |= BINDER_LOOPER_STATE_POLL;
 	wait_for_proc_work = binder_available_for_proc_work_ilocked(thread);
-=======
+//=======
 
-*/
-	thread->looper |= BINDER_LOOPER_STATE_POLL;
 
-	wait_for_proc_work = thread->transaction_stack == NULL &&
-		list_empty(&thread->todo) && thread->return_error == BR_OK;
+//	thread->looper |= BINDER_LOOPER_STATE_POLL;
+
+//	wait_for_proc_work = thread->transaction_stack == NULL &&
+//		list_empty(&thread->todo) && thread->return_error == BR_OK;
 //>>>>>>> 186
 
 	binder_inner_proc_unlock(thread->proc);
