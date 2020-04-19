@@ -2797,6 +2797,9 @@ static int init_percpu_info(struct f2fs_sb_info *sbi)
 		percpu_counter_destroy(&sbi->alloc_valid_block_count);
 
 	return err;
+
+/* todo remove this
+<<<< HEAD
 }
 
 #ifdef CONFIG_BLK_DEV_ZONED
@@ -2842,7 +2845,7 @@ static int init_blkz_info(struct f2fs_sb_info *sbi, int devi)
 	if (!zones)
 		return -ENOMEM;
 
-	/* Get block zones type */
+	/ Get block zones type /
 	while (zones && sector < nr_sectors) {
 
 		nr_zones = F2FS_REPORT_NR_ZONES;
@@ -2867,6 +2870,10 @@ static int init_blkz_info(struct f2fs_sb_info *sbi, int devi)
 	kvfree(zones);
 
 	return err;
+=======
+>>>>>>> 186
+
+*/
 }
 #endif
 
