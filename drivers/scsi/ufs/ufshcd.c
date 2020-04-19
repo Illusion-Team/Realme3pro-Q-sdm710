@@ -10411,15 +10411,17 @@ out:
 
 	return ret;
 }
+/*
 
+//todo remove ifcompile
 static int ufshcd_clock_scaling_prepare(struct ufs_hba *hba)
 {
-	#define DOORBELL_CLR_TOUT_US		(1000 * 1000) /* 1 sec */
+	#define DOORBELL_CLR_TOUT_US		(1000 * 1000) / 1 sec /
 	int ret = 0;
-	/*
+	/
 	 * make sure that there are no outstanding requests when
 	 * clock scaling is in progress
-	 */
+	 /
 	ufshcd_scsi_block_requests(hba);
 	down_write(&hba->lock);
 	if (ufshcd_wait_for_doorbell_clr(hba, DOORBELL_CLR_TOUT_US)) {
@@ -10430,6 +10432,7 @@ static int ufshcd_clock_scaling_prepare(struct ufs_hba *hba)
 
 	return ret;
 }
+*/
 
 static void ufshcd_clock_scaling_unprepare(struct ufs_hba *hba)
 {
@@ -10455,7 +10458,7 @@ static int ufshcd_devfreq_scale(struct ufs_hba *hba, bool scale_up)
 	if (hba->extcon && ufshcd_is_card_offline(hba))
 		return 0;
 
-	/* let's not get into low power until clock scaling is completed /
+	 let's not get into low power until clock scaling is completed /
 	hba->ufs_stats.clk_hold.ctx = CLK_SCALE_WORK;
 	ufshcd_hold_all(hba);
 
