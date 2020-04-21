@@ -1318,6 +1318,7 @@ static int dwc3_probe(struct platform_device *pdev)
 	pm_runtime_enable(dev);
 	pm_runtime_forbid(dev);
 
+
 	/* Check the maximum_speed parameter */
 	switch (dwc->maximum_speed) {
 	case USB_SPEED_LOW:
