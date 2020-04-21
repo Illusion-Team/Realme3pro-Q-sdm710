@@ -50,7 +50,7 @@
 #include "ufs-qcom.h"
 
 #ifdef VENDOR_EDIT
-//zhenjian Jiang@PSW.BSP.Storage.UFS, 2018-05-04 add for ufs device in /proc/devinfo 
+//zhenjian Jiang@PSW.BSP.Storage.UFS, 2018-05-04 add for ufs device in /proc/devinfo
 #include <soc/oppo/device_info.h>
 unsigned long ufs_outstanding;
 #endif
@@ -2286,6 +2286,7 @@ static ssize_t ufshcd_hibern8_on_idle_enable_store(struct device *dev,
 		goto update;
 	}
 
+
 	if (value) {
 		/*
 		 * As clock gating work would wait for the hibern8 enter work
@@ -2301,6 +2302,7 @@ static ssize_t ufshcd_hibern8_on_idle_enable_store(struct device *dev,
 
 update:
 	hba->hibern8_on_idle.is_enabled = value;
+
 out:
 	return count;
 }
